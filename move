@@ -1,3 +1,4 @@
+/*move partitions to corresponding table space*/
 
 select 'alter table ' || table_name || ' move partition ' || partition_name|| ' tablespace '|| TABLESPACE_NAME_DECIDED ||' parallel 32;' BATCH_PROCESS from (
 select * from (
